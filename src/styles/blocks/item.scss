@@ -1,0 +1,29 @@
+.item {
+  text-align: center;
+
+  &__photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    object-fit: cover;
+
+    @include hover(transform, scale(1.1));
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    color: $accent-main;
+    font-weight: bold;
+    line-height: 140%;
+  }
+
+  &__description {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0;
+  }
+}

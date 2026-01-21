@@ -1,0 +1,56 @@
+.phone {
+  position: relative;
+
+  &__popup {
+    position: absolute;
+    left: -180px;
+    top: 40px;
+    flex-direction: column;
+    min-width: 201px;
+    text-align: right;
+    color: #fff;
+    z-index: 1;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-25px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    @include on-tablet {
+      left: -216px;
+      top: -40px;
+      transform: translateX(25px);
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+
+    @include on-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__number {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__place {
+    display: block;
+  }
+
+  &:hover .phone__popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  &:focus-within .phone__popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

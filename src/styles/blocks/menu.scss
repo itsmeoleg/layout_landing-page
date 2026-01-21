@@ -1,0 +1,58 @@
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: $accent-main;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: auto;
+
+  &__nav {
+    margin-bottom: 16px;
+  }
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $accent-main;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__contact-title {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  &__contact-number {
+    display: block;
+    color: $text-color;
+    text-decoration: none;
+    font-size: inherit;
+    position: relative;
+    width: fit-content;
+
+    @include underline-hover($text-color, 1px, -4px, $anim-duration);
+  }
+
+  &__call-to-order {
+    position: relative;
+    margin-top: 16px;
+    display: block;
+    color: $text-color;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+
+    @include underline-hover($text-color, 1px, -8px, $anim-duration);
+
+    width: fit-content;
+  }
+}

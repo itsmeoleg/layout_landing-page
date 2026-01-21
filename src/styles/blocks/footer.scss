@@ -1,0 +1,14 @@
+.footer {
+  background-image: url(../images/the-met-footer.png);
+  background-size: cover;
+  background-position: center;
+
+  height: 180px;
+
+  @include on-tablet {
+    height: 360px;
+  }
+
+  position: sticky;
+  z-index: -1;
+}
