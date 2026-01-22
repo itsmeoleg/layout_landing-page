@@ -21,6 +21,12 @@
 
   &--menu {
     background-image: url(../icons/icon-burger.svg);
+    transition: 0.3s;
+
+    &:hover {
+      background-image: url(../icons/icon-burger-hover.svg);
+    }
+
   }
 
   &--close {
